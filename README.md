@@ -26,4 +26,5 @@
 
 1. **Routing**
 
--
+- Nextjs uses a folder routing system for its routes. To create a nested route, you can nest the folders in each other.
+- `/route/page.js` is a component that is unique to a route.
