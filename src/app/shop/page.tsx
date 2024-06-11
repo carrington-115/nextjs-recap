@@ -2,7 +2,7 @@ export default function Page() {
   return (
     <>
       <div>
-        <h1>Welcome to Dashboard</h1>
+        <h1>Hello Shopping page</h1>
       </div>
     </>
   );
