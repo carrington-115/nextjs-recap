@@ -27,4 +27,7 @@
 1. **Routing**
 
 - Nextjs uses a folder routing system for its routes. To create a nested route, you can nest the folders in each other.
-- `/route/page.js` is a component that is unique to a route.
+- `/route/page.tsx` is a component that is unique to a route. `/route/layout.tsx` is a sharedui that is common between routes in folder. It is important to know that layouts do not get rerendered when the state changes or during nested routing.
+- `/route/template.tsx` element is similar to `layout.tsx` in that it can also be shared, but it does not preserve the state when the app rerenders or route changes.
+- In the app file, when dealing with layout, error, page, `.tsx .ts` files, it is important to add `use client` at the top of the file to tell the server to execute the files as client files.
+- To create folders in the `/app` directory that is not used as a route, there is a pattern to follow, `(filename)`

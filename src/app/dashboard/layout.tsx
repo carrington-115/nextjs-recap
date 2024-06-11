@@ -9,7 +9,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <>
       <div>{children}</div>
       <button
-        onClick={() => router.push("/shop")}
+        onClick={() => router.push("/shoping")}
         className="px-4 py-2 rounded-md bg-blue-300 text-blue-800 hover:text-black hover:bg-white"
       >
         Shopping
