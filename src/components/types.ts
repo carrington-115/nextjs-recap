@@ -13,6 +13,11 @@ interface userTestimonyType {
   recommend: boolean;
 }
 
-interface testimonialCardType extends userTestimonyType {}
+interface testimonialCardType {
+  name: string;
+  country: string;
+  profession: string;
+  cardURL: string;
+}
 
 export type { userTestimonyType, testimonialCardType };
