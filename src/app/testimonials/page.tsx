@@ -16,7 +16,7 @@ export default function Page() {
             name={name}
             country={country}
             profession={profession}
-            cardURL=""
+            cardURL="/"
           />
         ))}
       </section>
