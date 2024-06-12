@@ -1,4 +1,4 @@
-export interface userTestimonyType {
+interface userTestimonyType {
   id: number;
   name: string;
   country: string;
@@ -12,3 +12,7 @@ export interface userTestimonyType {
   rating: number;
   recommend: boolean;
 }
+
+interface testimonialCardType extends userTestimonyType {}
+
+export type { userTestimonyType, testimonialCardType };

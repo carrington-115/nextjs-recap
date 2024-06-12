@@ -26,6 +26,16 @@ export default function TopNav() {
       >
         Shop
       </Link>
+      <Link
+        href="/testimonials"
+        className={
+          pathname === "/shop"
+            ? "text-red bg-red-300 px-4 py-2 rounded-lg"
+            : "hover:bg-green-300 text-black bg-transparent px-4 py-2 rounded-lg"
+        }
+      >
+        Testimonials
+      </Link>
     </nav>
   );
 }

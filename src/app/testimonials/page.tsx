@@ -6,9 +6,5 @@ export default function Page() {
   useEffect(() => {
     console.log(userTestimonials);
   }, []);
-  return (
-    <div>
-      <h2>Hello World</h2>
-    </div>
-  );
+  return <div className="grid grid-cols-4"></div>;
 }
