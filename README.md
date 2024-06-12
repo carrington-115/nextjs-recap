@@ -45,10 +45,16 @@ export default function Layout({
   users: React.ReactNode;
   settings: React.ReactNode;
 }) {
-  <div>
-    <section>{children}</section>
-    <section>{users}</section>
-    <section>{settings}</section>
-  </div>;
+  return (
+    <div>
+      <section>{children}</section>
+      <section>{users}</section>
+      <section>{settings}</section>
+    </div>
+  );
 }
 ```
+
+- The `route.ts` file is used for running server operations in a route, like api calls, CRUD operations, and other backend operations.
+
+2. **Fetching, Caching, and Revalidating**:
