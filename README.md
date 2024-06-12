@@ -31,5 +31,24 @@
 - `/route/template.tsx` element is similar to `layout.tsx` in that it can also be shared, but it does not preserve the state when the app rerenders or route changes.
 - In the app file, when dealing with layout, error, page, `.tsx .ts` files, it is important to add `use client` at the top of the file to tell the server to execute the files as client files.
 - To create folders in the `/app` directory that is not used as a route, there is a pattern to follow, `(filename)`. This functionality is used to improve the uniqueness of routes since you can add individual `layout.tsx` files to them.
-- To create dynamic routes in nextjs, you can use the syntax, `[filename]`. Then you can use the `useParams` hook from `next/navigation` to get the router parameters.
--
+- To create dynamic routes in nextjs, you can use the syntax, `[filename]`. Then you can use the `useParams` hook from `next/navigation` to get the router parameters. Dynamic routes are useful to handle data that has not yet arrived yet.
+- Parallel routes are you used to display multiple routes on a single page. The syntax to make parallel routes is `@filename`. This type of file structure is called a `slot`. We can add parallel routes in a route using the `layout.tsx` component as `props`.
+
+```typescript
+import React from "react";
+export default function Layout({
+  children,
+  users,
+  settings,
+}: {
+  children: React.ReactNode;
+  users: React.ReactNode;
+  settings: React.ReactNode;
+}) {
+  <div>
+    <section>{children}</section>
+    <section>{users}</section>
+    <section>{settings}</section>
+  </div>;
+}
+```
