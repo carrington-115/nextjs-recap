@@ -58,3 +58,32 @@ export default function Layout({
 - The `route.ts` file is used for running server operations in a route, like api calls, CRUD operations, and other backend operations.
 
 2. **Fetching, Caching, and Revalidating**:
+
+- Fetching in nextjs is done using the `fetch api` and it is possible to add caching to it.
+
+```javascript
+async function getData() {
+  const data = await fetch(`<url>`, { cache: "force-cache" });
+}
+```
+
+- Revalidating is the process of re-fetching data when the fetched data changes ensuring the latest data in the state. Data revalidation can be done on `time-based` and `on-demand base`.
+  \*\* For `time-based` validation, we can add the data validation parameter to the `fetch` method.
+
+```typescript
+const data = await fetch("<url>", { next: { revalidate: 3600 } });
+```
+
+- For `on-demand revalidation`, we can use the tage
+
+```typescript
+const data = await fetch("<url>", { next: { tags: ["collection"] } });
+```
+
+- We can use the `use server` component to denote if a function is a server function or a client function
+
+```typescript
+async function getFormData() {
+  "use server";
+}
+```
